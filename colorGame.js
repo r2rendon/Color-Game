@@ -10,6 +10,25 @@ var message = document.getElementById("message");
 
 var h1 = document.querySelector("h1");
 
+var reset = document.getElementById("newColor");
+
+reset.addEventListener("click", function()
+{
+    //Generate new colors
+    colors = generateRandomColors(6);
+    //Pick a random color
+    pickedColor = pickColor();
+    //Change colordisplay to math picked color
+    colorDisplay.textContent = pickedColor;
+    //Change squares
+    for(var i = 0; i < squares.length; i++)
+        squares[i].style.backgroundColor = colors[i];
+
+    reset.textContent = "New Color";
+
+    h1.style.backgroundColor = "#232323";
+});
+
 for(var i = 0; i < squares.length; i++)
 {
     //Add initial colors
@@ -24,6 +43,7 @@ for(var i = 0; i < squares.length; i++)
         if(clickedColor === pickedColor)
         {
             message.textContent = "Correct!";
+            reset.textContent = "PLAY AGAIN?"
             changeColors();
         }
         else{
