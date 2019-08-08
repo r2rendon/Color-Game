@@ -1,16 +1,14 @@
 var numSquares = 6;
-var colors = generateRandomColors(numSquares);
 
+var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
-
 var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
 var message = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var reset = document.getElementById("newColor");
-
 var easyBtn = document.getElementById("easyBtn");
 var hardBtn = document.getElementById("hardBtn");
 
@@ -62,7 +60,7 @@ reset.addEventListener("click", function()
         squares[i].style.backgroundColor = colors[i];
 
     reset.textContent = "New Color";
-
+    message.textContent = "";
     h1.style.backgroundColor = "steelblue";
 });
 
