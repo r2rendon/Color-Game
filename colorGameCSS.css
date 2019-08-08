@@ -1,5 +1,7 @@
 body{
     background-color: #232323;
+    margin: 0;
+    font-family: "Avenir";
 }
 
 .square{
@@ -8,15 +10,29 @@ body{
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 15%;
+    transition: background 0.5s;
+}
+
+#colorDisplay{
+    font-size: 200%;
 }
 
 #container{
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 600px;
+
 }
 
 h1{
     color: white;
+    line-height: 1.1;
+    text-align: center;
+    background: steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 20px 0;
 }
 
 #message{
@@ -30,5 +46,29 @@ h1{
 }
 
 .selected{
-    background-color: blue;
+    background-color: steelblue;
+    color: white;
+}
+
+button{
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    font-family: "Avenir";
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+}
+
+#message{
+    display: inline-block;
+    width: 20%;
+}
+
+button:hover{
+    background-color: steelblue;
+    color: white;
 }

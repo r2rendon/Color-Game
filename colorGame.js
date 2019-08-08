@@ -63,7 +63,7 @@ reset.addEventListener("click", function()
 
     reset.textContent = "New Color";
 
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
 });
 
 for(var i = 0; i < squares.length; i++)
